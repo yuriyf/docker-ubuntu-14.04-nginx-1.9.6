@@ -32,7 +32,6 @@ RUN chmod -R 777 /var/www
 RUN rm -f /etc/nginx/conf.d/default.conf
 COPY sites-enabled/vhost.conf /etc/nginx/sites-enabled/vhost.conf
 COPY phpinfo.php /var/www/phpinfo.php
-RUN echo "<?php phpinfo(); ?>" > /var/www/infophp.php
 RUN chmod 777 /var/www/phpinfo.php
 
 
